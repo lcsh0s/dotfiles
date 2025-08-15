@@ -22,14 +22,13 @@ if [ "$ICON" = "􀊩" ] && [ "$volume" -eq 0 ]; then
 fi
 
 audio=(
-	background.padding_right=6
+	background.padding_right=12
 	label=""
 	label.padding_right="$label_pr"
 	label.padding_left="$label_pl"
 	icon="$ICON"
 	icon.padding_right=0
 	icon.padding_left="$icon_pl"
-	y_offset=-2
 	script="$PLUGIN_DIR/audio.sh"
 	click_script="$PLUGIN_DIR/audio_click.sh"
 )

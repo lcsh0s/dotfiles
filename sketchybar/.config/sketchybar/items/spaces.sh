@@ -5,6 +5,7 @@ for sid in $(aerospace list-workspaces --all); do
 		icon="${SPACE_ICONS[sid - 1]}"
 		icon.padding_left=7
 		icon.padding_right=8
+		icon.font.size=16
 		background.color="$GREY_OP_50"
 		background.corner_radius=5
 		label.drawing=off

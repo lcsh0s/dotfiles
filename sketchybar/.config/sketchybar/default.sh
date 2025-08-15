@@ -9,14 +9,17 @@ bar=(
 sketchybar --bar "${bar[@]}"
 
 default=(
-	padding_left=3
-	padding_right=3
+	y_offset=-2
+	padding_left=6
+	padding_right=6
 	background.color="$ITEM_BG"
-	background.corner_radius=10
-	background.height=35
+	background.corner_radius=15
+	background.height=30
+	background.border_width=1
+	background.border_color="0xff484954"
 	icon.color=$WHITE
 	icon.y_offset=1
-	icon.font="$FONT_FACE:Bold:16"
+	icon.font="$FONT_FACE:Bold:15"
 	label.color=$WHITE
 	label.y_offset=1
 	icon.padding_left=10

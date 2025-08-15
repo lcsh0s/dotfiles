@@ -12,7 +12,6 @@ source "$ITEM_DIR/net/tailscale.sh"
 
 bracket=(
 	background.color="$ITEM_BG"
-	y_offset=-2
 )
 
 sketchybar --add bracket net_group wifi.up wifi.down wifi tailscale \

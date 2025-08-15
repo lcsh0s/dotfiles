@@ -4,6 +4,7 @@ up=(
 	drawing=off
 	width=0
 	background.color="$TRANSPARENT"
+	background.border_width=0
 	icon="􀓂"
 	icon.color="$MAUVE"
 	icon.font="$FONT_FACE:Bold:15"

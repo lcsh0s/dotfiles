@@ -2,7 +2,7 @@
 
 tailscale=(
 	background.color="$TRANSPARENT"
-	y_offset=-2
+	background.border_width=0
 	label.drawing=off
 	icon="􀤆"
 	icon.color="$GREY"
