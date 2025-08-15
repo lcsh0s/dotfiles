@@ -16,6 +16,7 @@ default=(
 	background.height=35
 	icon.color=$WHITE
 	icon.y_offset=1
+	icon.font="$FONT_FACE:Bold:16"
 	label.color=$WHITE
 	label.y_offset=1
 	icon.padding_left=10

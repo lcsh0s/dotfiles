@@ -60,5 +60,5 @@ battery=(
 	label="$PERCENT%"
 )
 
-sketchybar --animate tanh 60 \
+sketchybar --animate tanh 30 \
 	--set battery "${battery[@]}"

@@ -3,6 +3,8 @@
 killall network_load >/dev/null 2>&1
 nohup "$CONFIG_DIR/helpers/network_load/bin/network_load" en0 network_update 4.0 >/dev/null 2>&1 &
 
+sleep 0.1
+
 source "$ITEM_DIR/net/up.sh"
 source "$ITEM_DIR/net/down.sh"
 source "$ITEM_DIR/net/wifi.sh"

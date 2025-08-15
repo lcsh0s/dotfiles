@@ -5,6 +5,7 @@ up=(
 	background.color="$TRANSPARENT"
 	icon="􀓂"
 	icon.color="$MAUVE"
+	icon.font="$FONT_FACE:Bold:15"
 	label="000 KB/s"
 	label.color="$MAUVE"
 	script="$PLUGIN_DIR/net/up.sh"

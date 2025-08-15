@@ -34,4 +34,5 @@ ts=(
 	icon.color="$COLOR"
 )
 
-sketchybar --set tailscale "${ts[@]}"
+sketchybar --animate tanh 30 \
+	--set tailscale "${ts[@]}"

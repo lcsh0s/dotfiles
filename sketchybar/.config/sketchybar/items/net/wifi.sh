@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-ICON="􀙈"
+ICON="󰤮"
 COLOR="$GREY"
 
 wifi=(
 	icon="$ICON"
 	icon.color="$COLOR"
+	icon.font="$FONT_FACE:Bold:17"
 	background.color="$TRANSPARENT"
 	background.padding_right=0
 	update_freq=5
