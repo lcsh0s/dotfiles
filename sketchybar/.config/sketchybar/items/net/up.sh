@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 up=(
+	drawing=off
 	width=0
 	background.color="$TRANSPARENT"
 	icon="􀓂"
@@ -10,6 +11,7 @@ up=(
 	label.color="$MAUVE"
 	script="$PLUGIN_DIR/net/up.sh"
 	y_offset=4
+	updates=when_shown
 )
 
 sketchybar --add item wifi.up right \

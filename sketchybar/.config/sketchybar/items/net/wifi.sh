@@ -8,7 +8,7 @@ wifi=(
 	icon.color="$COLOR"
 	icon.font="$FONT_FACE:Bold:17"
 	background.color="$TRANSPARENT"
-	background.padding_right=0
+	background.padding_right=15
 	update_freq=5
 	label.drawing=off
 	script="$PLUGIN_DIR/net/wifi.sh"
@@ -17,5 +17,5 @@ wifi=(
 )
 
 sketchybar --add item wifi right \
-	--subscribe wifi wifi_change \
+	--subscribe wifi wifi_change mouse.entered mouse.exited \
 	--set wifi "${wifi[@]}"

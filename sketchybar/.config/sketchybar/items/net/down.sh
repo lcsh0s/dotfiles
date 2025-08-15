@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 down=(
+	drawing=off
 	background.color="$TRANSPARENT"
 	background.padding_left=0
 	icon="􀓃"
@@ -10,6 +11,7 @@ down=(
 	label.color="$GREEN"
 	script="$PLUGIN_DIR/net/down.sh"
 	y_offset=-6
+	updates=when_shown
 )
 
 sketchybar --add item wifi.down right \
