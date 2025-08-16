@@ -2,13 +2,13 @@ SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9")
 
 for sid in $(aerospace list-workspaces --all); do
 	space=(
-		icon="${SPACE_ICONS[sid - 1]}"
-		icon.padding_left=7
-		icon.padding_right=8
-		icon.font.size=16
-		background.color="$GREY_OP_50"
-		background.corner_radius=5
 		label.drawing=off
+		icon="${SPACE_ICONS[sid - 1]}"
+		icon.padding_left=10
+		icon.padding_right=10
+		icon.font.size=16
+		background.color="$TRANSPARENT"
+		background.border_width=0
 		script="$CONFIG_DIR/plugins/aerospace.sh $sid"
 	)
 
