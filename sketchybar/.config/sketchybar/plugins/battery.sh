@@ -18,38 +18,23 @@ else
 	INFO="Battery"
 fi
 
+COLOR="$WHITE"
+if [ "$PERCENT" -le 10 ]; then
+	COLOR="$RED"
+fi
+
 if [ "$INFO" = "AC" ]; then
 	ICON="􀢋"
-	if [ "$PERCENT" -ge 95 ]; then
-		COLOR="$GREEN"
-	elif [ "$PERCENT" -ge 75 ]; then
-		COLOR="$GREEN"
-	elif [ "$PERCENT" -ge 50 ]; then
-		COLOR="$GREEN"
-	elif [ "$PERCENT" -ge 25 ]; then
-		COLOR="$FLAMINGO"
-	else
-		COLOR="$RED"
-	fi
 else
-	COLOR="$WHITE"
 	if [ "$PERCENT" -ge 95 ]; then
-		# COLOR="$GREEN"
 		ICON="􀛨"
 	elif [ "$PERCENT" -ge 75 ]; then
-		# COLOR="$GREEN"
 		ICON="􀺸"
 	elif [ "$PERCENT" -ge 50 ]; then
-		# COLOR="$GREEN"
-		ICON="􀺶"
-	elif [ "$PERCENT" -ge 25 ]; then
-		# COLOR="$FLAMINGO"
 		ICON="􀺶"
 	elif [ "$PERCENT" -ge 11 ]; then
-		COLOR="$FLAMINGO"
 		ICON="􀛩"
 	else
-		COLOR="$RED"
 		ICON="􀛪"
 	fi
 fi
