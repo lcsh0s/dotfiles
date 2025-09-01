@@ -9,7 +9,7 @@ bar=(
 sketchybar --bar "${bar[@]}"
 
 default=(
-	y_offset=-2
+	y_offset=-1
 	padding_left=6
 	padding_right=6
 	background.color="$ITEM_BG"
