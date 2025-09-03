@@ -9,7 +9,7 @@ label_pl=8
 
 if [ "$name" = "MacBook Pro Speakers" ]; then
 	ICON="􀊩"
-elif [ "$name" = "External Headphones" ]; then
+elif [ "$name" = "External Headphones" ] || [ "$name" = "WH-1000XM5" ]; then
 	ICON="􃍅"
 else
 	ICON="􀊩"
@@ -18,7 +18,7 @@ fi
 icon_pl=11
 if [ "$ICON" = "􀊩" ] && [ "$volume" -eq 0 ]; then
 	ICON="􀊣"
-	icon_pl=15
+	icon_pl=13
 fi
 
 audio=(
