@@ -10,14 +10,9 @@ get_workspaces() {
 	local sleep_duration=1
 
 	while [ $attempt -le $max_attempts ]; do
-		echo "Attempt $attempt: Getting aerospace workspaces..." >&2
 
-		# Get the workspace list
 		workspaces=$(aerospace list-workspaces --all 2>/dev/null)
-
-		# Check if we got a valid result (non-empty and contains expected format)
 		if [ -n "$workspaces" ] && echo "$workspaces" | grep -q '^[0-9]'; then
-			echo "Successfully retrieved workspaces: $workspaces" >&2
 			echo "$workspaces"
 			return 0
 		fi
@@ -32,16 +27,12 @@ get_workspaces() {
 	return 1
 }
 
-# Get workspaces with retry logic
-echo "Starting aerospace workspace detection..."
 workspaces=$(get_workspaces)
 
 if [ $? -ne 0 ]; then
 	echo "ERROR: Could not retrieve aerospace workspaces after multiple attempts"
 	exit 1
 fi
-
-echo "Processing workspaces: $workspaces"
 
 # Process each workspace
 for sid in $workspaces; do
@@ -69,10 +60,7 @@ for sid in $workspaces; do
 		script="$CONFIG_DIR/plugins/aerospace.sh $sid"
 	)
 
-	echo "Adding workspace $sid with icon '$icon'"
 	sketchybar --add item space.$sid left \
 		--subscribe space.$sid aerospace_workspace_change \
 		--set space.$sid "${space[@]}"
 done
-
-echo "Aerospace workspace setup completed successfully"

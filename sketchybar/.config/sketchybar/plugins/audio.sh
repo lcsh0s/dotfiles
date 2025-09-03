@@ -14,7 +14,7 @@ if [ -n "$current_name" ]; then
 	label_pl=10
 fi
 
-if [ "$SENDER" = "mouse.entered" ]; then
+if [ "$SENDER" = "mouse.entered" ] || [ -n "$current_name" ]; then
 	label="$name"
 	label_pr=10
 	label_pl=10
@@ -29,7 +29,7 @@ fi
 
 if [ "$name" = "MacBook Pro Speakers" ]; then
 	ICON="􀊩"
-elif [ "$name" = "External Headphones" ]; then
+elif [ "$name" = "External Headphones" ] || [ "$name" = "WH-1000XM5" ]; then
 	ICON="􃍅"
 else
 	ICON="􀊩"
@@ -45,8 +45,8 @@ audio=(
 	label="$label"
 	label.padding_right="$label_pr"
 	label.padding_left="$label_pl"
-	icon="$ICON"
 	icon.padding_left="$icon_pl"
+	icon="$ICON"
 )
 
 sketchybar --animate quadratic 40 \

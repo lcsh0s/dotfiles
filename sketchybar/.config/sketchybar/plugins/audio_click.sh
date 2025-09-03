@@ -7,15 +7,9 @@ IFS=',' read -r name type id uid <<<"$current_audio"
 volume=$(osascript -e "output volume of (get volume settings)")
 
 current_name=$(sketchybar --query audio | jq -r '.label.value')
-label="$current_name"
-label_pr=6
-label_pl=8
-
-if [ -n "$current_name" ]; then
-	label="$name"
-	label_pr=10
-	label_pl=10
-fi
+label="$name"
+label_pr=10
+label_pl=10
 
 if [ "$name" = "MacBook Pro Speakers" ]; then
 	ICON="􀊩"
@@ -41,3 +35,5 @@ audio=(
 
 sketchybar --animate tanh 20 \
 	--set audio "${audio[@]}"
+
+current_name=$(sketchybar --query audio | jq -r '.label.value')
