@@ -53,5 +53,6 @@ end
 
 # OrbStack command-line tools and integration
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+set -gx PATH $PATH (go env GOPATH)/bin
 
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
