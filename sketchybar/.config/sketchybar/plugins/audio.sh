@@ -47,6 +47,8 @@ then
 		ICON="􀊩"
 	elif [ "$name" = "External Headphones" ] || [ "$name" = "WH-1000XM5" ]; then
 		ICON="􃍅"
+	elif [ "$name" = "AirPods Pro de Lucas" ]; then
+		ICON="􀪷"
 	else
 		ICON="􀊩"
 	fi

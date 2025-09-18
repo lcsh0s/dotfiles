@@ -42,6 +42,10 @@ source $HOME/.local/bin/env.fish
 # Yazi
 export EDITOR=nvim
 
+# NVM
+set -x NVM_DIR $HOME/.nvm
+bass source $NVM_DIR/nvm.sh --no-use
+
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	yazi $argv --cwd-file="$tmp"
@@ -56,3 +60,6 @@ source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 set -gx PATH $PATH (go env GOPATH)/bin
 
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lucas/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/lucas/Downloads/google-cloud-sdk/path.fish.inc'; end

@@ -9,3 +9,5 @@
 	navigate = true
 [merge]
 	conflictStyle = zdiff3
+[merge "ours"]
+	driver = true
