@@ -254,7 +254,64 @@ require('lazy').setup({
   --
   -- Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
   --
-
+  -- {
+  --   'mrcjkb/rustaceanvim',
+  --   version = '^6', -- Recommended
+  --   lazy = false, -- This plugin is already lazy
+  --   config = function()
+  --     vim.g.rustaceanvim = {
+  --       server = {
+  --         load_vscode_settings = false,
+  --
+  --         on_attach = function(client, bufnr)
+  --           local builtin = require 'telescope.builtin'
+  --
+  --           -- LSP code actions via Telescope
+  --           vim.keymap.set('n', '<leader>cR', function()
+  --             builtin.lsp_code_actions()
+  --           end, { desc = '[C]ode [R]efactor / Action', buffer = bufnr })
+  --
+  --           -- Telescope LSP definitions, references, symbols, etc.
+  --           vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = '[G]oto [D]efinition', buffer = bufnr })
+  --           vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = '[G]oto [R]eferences', buffer = bufnr })
+  --           vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = '[G]oto [I]mplementation', buffer = bufnr })
+  --           vim.keymap.set('n', '<leader>D', builtin.lsp_type_definitions, { desc = 'Type [D]efinition', buffer = bufnr })
+  --           vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, { desc = '[D]ocument [S]ymbols', buffer = bufnr })
+  --           vim.keymap.set('n', '<leader>ws', builtin.lsp_dynamic_workspace_symbols, { desc = '[W]orkspace [S]ymbols', buffer = bufnr })
+  --           vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics', buffer = bufnr })
+  --
+  --           -- For Rust Debuggables, telescope doesn't have a builtin picker,
+  --           -- so we still use RustLsp, but wrap it in a function for consistency
+  --           vim.keymap.set('n', '<leader>dr', function()
+  --             vim.cmd.RustLsp 'debuggables'
+  --           end, { desc = 'Rust Debuggables', buffer = bufnr })
+  --         end,
+  --         root_dir = function(fname)
+  --           return require('lspconfig.util').root_pattern 'Cargo.toml'(fname)
+  --             or require('lspconfig.util').root_pattern 'rust-analyzer.json'(fname)
+  --             or require('lspconfig.util').find_git_ancestor(fname)
+  --         end,
+  --         default_settings = {
+  --           -- rust-analyzer language server configuration
+  --           ['rust-analyzer'] = {
+  --             cargo = {
+  --               allFeatures = true,
+  --               loadOutDirsFromCheck = true,
+  --               buildScripts = {
+  --                 enable = true,
+  --               },
+  --             },
+  --             -- Add clippy lints for Rust.
+  --             checkOnSave = true,
+  --             procMacro = {
+  --               enable = true,
+  --             },
+  --           },
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
   --    {

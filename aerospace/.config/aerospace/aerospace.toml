@@ -38,17 +38,17 @@ on-focused-monitor-changed = ["move-mouse monitor-lazy-center"]
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
-[[on-window-detected]]
-if.app-name-regex-substring = "messages"
-run = "layout floating"
+# [[on-window-detected]]
+# if.app-name-regex-substring = "messages"
+# run = "layout floating"
 
 [[on-window-detected]]
 if.app-name-regex-substring = "finder"
 run = "layout floating"
 
-[[on-window-detected]]
-if.app-name-regex-substring = "proton pass"
-run = "layout floating"
+# [[on-window-detected]]
+# if.app-name-regex-substring = "proton pass"
+# run = "layout floating"
 
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -68,7 +68,7 @@ inner.horizontal = 10
 inner.vertical = 10
 outer.left = 0
 outer.bottom = 0
-outer.top = [{ monitor."MPG321UX OLED" = 42 }, { monitor."LS27A800U" = 43 }, 10]
+outer.top = 0
 outer.right = 0
 
 # 'main' binding mode declaration

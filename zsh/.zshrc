@@ -3,9 +3,9 @@
 ########################################
 
 # --- Run neofetch only in interactive shells (but not inside Neovim) ---
-if [[ $- == *i* && -z $NVIM ]]; then
-    fastfetch
-fi
+# if [[ $- == *i* && -z $NVIM ]]; then
+#     fastfetch
+# fi
 
 
 ########################################
@@ -77,10 +77,10 @@ fi
 alias g="git"
 
 # eza (better ls)
-alias l="eza -l"
-alias ll="eza -l --all"
-alias ls="eza"
-alias lz="lazygit"
+alias l='eza -l'
+alias ll='eza -l --all'
+alias ls='eza'
+alias lz='lazygit'
 
 # nvim shortcut (open current directory by default)
 n() {
@@ -89,3 +89,32 @@ n() {
 
 # Tailscale shortcut
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
+
+########################################
+# OH MY ZSH
+########################################
+
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git bazel brew docker eza fzf golang macos rust ssh sudo uv zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+
+########################################
+# UTILS
+########################################
+
+export PATH="/opt/homebrew/opt/unzip/bin:$PATH"
+export FPATH="~/.config/zsh/completions/zsh:$FPATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lucas/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lucas/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lucas/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lucas/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

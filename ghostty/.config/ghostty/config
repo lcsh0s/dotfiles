@@ -14,8 +14,8 @@ window-height = 62
 font-size=16
 
 # Window opacity
-background-opacity = 0.6
-background-blur = true
+# background-opacity = 0.6
+# background-blur = true
 
 # Hide mouse while typing
 mouse-hide-while-typing
