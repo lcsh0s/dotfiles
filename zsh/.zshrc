@@ -1,14 +1,4 @@
 ########################################
-# ZSH CONFIGURATION
-########################################
-
-# --- Run neofetch only in interactive shells (but not inside Neovim) ---
-# if [[ $- == *i* && -z $NVIM ]]; then
-#     fastfetch
-# fi
-
-
-########################################
 # PROMPT + SHELL INITIALIZATION
 ########################################
 
@@ -95,12 +85,12 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 # OH MY ZSH
 ########################################
 
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git bazel brew docker eza fzf golang macos rust ssh sudo uv zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
-
+# export ZSH="$HOME/.oh-my-zsh"
+# ZSH_THEME="robbyrussell"
+# plugins=(git bazel brew docker eza fzf golang macos rust ssh sudo uv zsh-autosuggestions)
+#
+# source $ZSH/oh-my-zsh.sh
+#
 
 ########################################
 # UTILS
@@ -115,6 +105,4 @@ if [ -f '/Users/lucas/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/lucas/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lucas/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-
-export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
