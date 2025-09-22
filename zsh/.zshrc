@@ -90,14 +90,12 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 # plugins=(git bazel brew docker eza fzf golang macos rust ssh sudo uv zsh-autosuggestions)
 #
 # source $ZSH/oh-my-zsh.sh
-#
 
 ########################################
 # UTILS
 ########################################
 
 export PATH="/opt/homebrew/opt/unzip/bin:$PATH"
-export FPATH="~/.config/zsh/completions/zsh:$FPATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/lucas/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lucas/Downloads/google-cloud-sdk/path.zsh.inc'; fi
