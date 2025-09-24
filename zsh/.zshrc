@@ -85,11 +85,11 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 # OH MY ZSH
 ########################################
 
-# export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
-# plugins=(git bazel brew docker eza fzf golang macos rust ssh sudo uv zsh-autosuggestions)
+plugins=(git bazel brew docker eza fzf golang macos rust ssh sudo uv zsh-autosuggestions)
 #
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 ########################################
 # UTILS
