@@ -21,10 +21,15 @@ font-size=16
 mouse-hide-while-typing
 
 # Ghostty shell integration
-shell-integration = fish
+shell-integration = zsh
 
 # Tmux rebind to Cmd+B
 keybind = cmd+b=text:\x02
 
+# Theme
 theme = catppuccin-mocha.conf
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = true
 
