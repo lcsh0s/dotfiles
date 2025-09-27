@@ -58,38 +58,15 @@ if command -v go >/dev/null 2>&1; then
     export PATH="$PATH:$(go env GOPATH)/bin"
 fi
 
-
-########################################
-# ALIASES & SHORT FUNCTIONS
-########################################
-
-# Git wrapper
-alias g="git"
-
-# eza (better ls)
-alias l='eza -l'
-alias ll='eza -l --all'
-alias ls='eza'
-alias lz='lazygit'
-
-# nvim shortcut (open current directory by default)
-n() {
-    nvim "$@" .
-}
-
 # Tailscale shortcut
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
-
 
 ########################################
 # OH MY ZSH
 ########################################
 
 export ZSH="$HOME/.oh-my-zsh"
-# ZSH_THEME="robbyrussell"
 plugins=(git bazel brew docker eza fzf golang macos rust ssh sudo uv zsh-autosuggestions)
-#
-source $ZSH/oh-my-zsh.sh
 
 ########################################
 # UTILS
@@ -104,3 +81,20 @@ if [ -f '/Users/lucas/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 if [ -f '/Users/lucas/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lucas/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="$HOME/.local/bin:$PATH"
+
+########################################
+# ALIASES & SHORT FUNCTIONS
+########################################
+
+# eza (better ls)
+alias l='eza -l'
+alias ll='eza -l --all'
+alias ls='eza'
+alias lz='lazygit'
+
+# nvim shortcut (open current directory by default)
+n() {
+    nvim "$@" .
+}
+
+
