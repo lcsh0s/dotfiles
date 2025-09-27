@@ -67,6 +67,7 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 export ZSH="$HOME/.oh-my-zsh"
 plugins=(git bazel brew docker eza fzf golang macos rust ssh sudo uv zsh-autosuggestions)
+source $ZSH/oh-my-zsh.sh
 
 ########################################
 # UTILS
@@ -92,9 +93,13 @@ alias ll='eza -l --all'
 alias ls='eza'
 alias lz='lazygit'
 
+# Spotify
+alias spo='spotify_player'
+
 # nvim shortcut (open current directory by default)
 n() {
     nvim "$@" .
 }
 
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
