@@ -18,6 +18,7 @@ config.tab_max_width = 32
 config.window_frame = {
 	border_top_height = "3px",
 }
+
 -- Keys --
 config.keys = {
 	{
@@ -39,6 +40,7 @@ config.keys = {
 
 -- Plugins --
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+
 tabline.setup({
 	options = {
 		icons_enabled = true,
@@ -46,20 +48,20 @@ tabline.setup({
 		tabs_enabled = true,
 		theme_overrides = {},
 		section_separators = {
-			left = wezterm.nerdfonts.pl_left_hard_divider,
-			right = wezterm.nerdfonts.pl_right_hard_divider,
+			left = wezterm.nerdfonts.ple_right_half_circle_thin,
+			right = wezterm.nerdfonts.ple_left_half_circle_thin,
 		},
 		component_separators = {
-			left = wezterm.nerdfonts.pl_left_soft_divider,
-			right = wezterm.nerdfonts.pl_right_soft_divider,
+			left = wezterm.nerdfonts.ple_right_half_circle_thin,
+			right = "|",
 		},
 		tab_separators = {
-			left = wezterm.nerdfonts.pl_left_hard_divider,
-			right = wezterm.nerdfonts.pl_right_hard_divider,
+			left = wezterm.nerdfonts.ple_right_half_circle_thick,
+			right = wezterm.nerdfonts.ple_left_half_circle_thick,
 		},
 	},
 	sections = {
-		tabline_a = { "mode" },
+		tabline_a = { { "", cond = false } },
 		tabline_b = { { "", cond = false } },
 		tabline_c = { { "", cond = false } },
 		tab_active = {
@@ -69,12 +71,13 @@ tabline.setup({
 			{ "cwd", padding = { left = 0, right = 1 } },
 		},
 		tab_inactive = { "index", { "process", padding = { left = 0, right = 1 }, icons_enabled = false } },
-		tabline_x = { "ram", "cpu" },
+		tabline_x = { { "ram", icons_enabled = false }, { "cpu", icons_enabled = false } },
 		tabline_y = { { "", cond = false } },
 		tabline_z = { { "", cond = false } },
 	},
 	extensions = {},
 })
+
 tabline.apply_to_config(config)
 
 return config
